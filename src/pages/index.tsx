@@ -1,11 +1,23 @@
-import { Sidebar } from "./components/Sidebar";
+// import '@/styles/globals.css'
+// import type { AppProps } from "next/app";
 
-const Index = () => {
-  return (
-    <>
-      <Sidebar />
-    </>
-  );
-};
+// export default function App({ Component, pageProps }: AppProps) {
+//   return <Component {...pageProps} />;
+// }
 
-export default Index;
+import { useState } from "react";
+import {
+  AppShell,
+  Navbar,
+  Header,
+  Footer,
+  Aside,
+  Text,
+  MediaQuery,
+  Burger,
+  useMantineTheme,
+} from "@mantine/core";
+
+export default function Index() {
+  return <Text>dd</Text>;
+}
