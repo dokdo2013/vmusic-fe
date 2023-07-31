@@ -7,17 +7,18 @@ import {
   Burger,
   Button,
   Flex,
-  Footer,
   Header,
   MantineProvider,
   MediaQuery,
   Navbar,
   Text,
+  Title,
   useMantineTheme,
 } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { emotionCache } from "@/emotionCache";
 import { useGetUser } from "@/fetcher/useGetUser";
+import Link from "next/link";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -56,6 +57,7 @@ export default function App(props: AppProps) {
                   : theme.colors.gray[0],
             },
           }}
+          padding={0}
           navbarOffsetBreakpoint="sm"
           asideOffsetBreakpoint="sm"
           navbar={
@@ -65,13 +67,8 @@ export default function App(props: AppProps) {
               hidden={!opened}
               width={{ sm: 200, lg: 300 }}
             >
-              <Text>Application navbar</Text>
+              <Text>기능 준비 중입니다</Text>
             </Navbar>
-          }
-          footer={
-            <Footer height={60} p="md">
-              Application footer
-            </Footer>
           }
           header={
             <Header height={{ base: 50, md: 70 }} p="md">
@@ -93,12 +90,16 @@ export default function App(props: AppProps) {
                 </MediaQuery>
 
                 <Flex justify={"space-between"} className="w-full">
-                  <Text className="cafe24_supermagic_bold" size="xl">
-                    브이뮤직{" "}
-                    <Badge color="pink" variant="light">
-                      Beta
-                    </Badge>
-                  </Text>
+                  <Link href="/">
+                    <Flex align="center" gap={10}>
+                      <Title className="cafe24_supermagic_bold" order={2}>
+                        브이뮤직{" "}
+                      </Title>
+                      <Badge color="pink" variant="light">
+                        Beta
+                      </Badge>
+                    </Flex>
+                  </Link>
 
                   {userInfo && !error ? (
                     <>{userInfo.user.name}</>
