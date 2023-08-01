@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <Flex direction="column" p={20}>
       <Title order={3} mb={40}>
-        최근 올라온 영상
+        최근 등록된 영상
       </Title>
 
       {isVideoLoading && <p>Loading...</p>}
@@ -24,7 +24,6 @@ export default function Index() {
           { maxWidth: "2000", cols: 5, spacing: "md" },
           { maxWidth: "xl", cols: 4, spacing: "md" },
           { maxWidth: "lg", cols: 3, spacing: "md" },
-          // { maxWidth: "md", cols: 2, spacing: "md" },
           { maxWidth: "sm", cols: 2, spacing: "sm" },
           { maxWidth: "xs", cols: 1, spacing: "sm" },
         ]}
