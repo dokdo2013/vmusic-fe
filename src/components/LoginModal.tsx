@@ -1,3 +1,4 @@
+import { API_ENDPOINT } from "@/common";
 import { Button, Flex, Modal } from "@mantine/core";
 import { IconBrandTwitch } from "@tabler/icons-react";
 import { useRouter } from "next/router";
@@ -14,7 +15,7 @@ const LoginModal = ({ opened, onClose }: any) => {
   return (
     <Modal opened={opened} onClose={onClose} title="통합 로그인">
       <Flex direction="column" gap={10} my={20}>
-        <a href={`http://localhost:8000/user/twitch?path=${currentPath}`}>
+        <a href={`${API_ENDPOINT}/user/twitch?path=${currentPath}`}>
           <Button
             color="violet"
             size="md"
