@@ -34,4 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.env
+# Don't ignore environment variable files
+# .env
