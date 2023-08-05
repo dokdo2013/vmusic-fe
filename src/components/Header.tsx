@@ -1,4 +1,3 @@
-import { API_ENDPOINT } from "@/common";
 import { useGetUser } from "@/fetcher/useGetUser";
 import {
   Header as MantineHeader,
@@ -49,7 +48,9 @@ const Header = ({ args }: any) => {
           </Link>
 
           {userInfo && !error ? (
-            <a href={`${API_ENDPOINT}/user/logout`}>{userInfo.user.name}</a>
+            <a href={`${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/logout`}>
+              {userInfo.user.name}
+            </a>
           ) : (
             <Button color="pink" size="sm" onClick={openLoginModal}>
               로그인

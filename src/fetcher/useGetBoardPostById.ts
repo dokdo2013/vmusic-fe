@@ -1,10 +1,9 @@
-import { API_ENDPOINT } from "@/common";
 import axios from "axios";
 import useSWR from "swr";
 
 const fetcher = async (args: [string, string, string]): Promise<any> => {
   const result = await axios.get(
-    `${API_ENDPOINT}/board/${args[1]}/post/${args[2]}`,
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/board/${args[1]}/post/${args[2]}`,
     {
       withCredentials: true,
     }
