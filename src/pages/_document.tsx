@@ -35,11 +35,11 @@ class _Document extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <Script
+          <script
             src="https://buttr.dev/butter.js"
             data-site-id="ribgpfgjzs"
             async
-          ></Script>
+          ></script>
           <meta name="description" content="브이뮤직" />
         </Head>
         <body>
