@@ -8,6 +8,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import { ServerStyles, createStylesServer } from "@mantine/next";
+import Script from "next/script";
 
 const stylesServer = createStylesServer(emotionCache());
 
@@ -34,6 +35,11 @@ class _Document extends Document {
     return (
       <Html lang="ko">
         <Head>
+          <Script
+            src="https://buttr.dev/butter.js"
+            data-site-id="ribgpfgjzs"
+            async
+          ></Script>
           <meta name="description" content="브이뮤직" />
         </Head>
         <body>
